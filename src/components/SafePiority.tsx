@@ -41,7 +41,7 @@ const SafetyPriority: React.FC = () => {
       {badges.map((badge, idx) => (
         <div
           key={idx}
-          className={`absolute ${badge.position} bg-white text-black text-xs md:text-sm font-medium flex items-center gap-2 px-4 py-[10px] rounded shadow z-10`}
+          className={`absolute ${badge.position} bg-white text-black text-xs md:text-sm font-medium flex items-center gap-2 md:px-4 md:py-[10px] py-1 px-2 rounded shadow z-10`}
         >
           <img src='/check.svg' />
           {badge.text}
