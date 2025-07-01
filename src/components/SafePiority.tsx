@@ -1,5 +1,4 @@
 import React from 'react';
-import { ShieldCheck } from 'lucide-react';
 
 const badges = [
   { text: 'Insured Services', position: 'bottom-40 left-[30%]' },
