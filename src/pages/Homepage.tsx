@@ -1,7 +1,6 @@
-import React from 'react';
 import Hero from '../components/Hero';
 import ServicesSection from '../components/Reliable';
-import WhyChooseUs from '../components/WhyChooseus';
+import WhyChooseUs from '../components/WhyChooseUs';
 import SafetyPriority from '../components/SafePiority';
 
 const Homepage = () => {
