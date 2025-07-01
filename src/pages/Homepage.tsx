@@ -4,6 +4,8 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import SafetyPriority from '../components/SafePiority';
 import GasProductGrid from '../components/Gasproducts';
 import ContactSection from '../components/Contactsection';
+import EmergencyHelpSection from '../components/EmergencyHelp';
+import Footer from '../components/Footer';
 
 const Homepage = () => {
   return (
@@ -14,6 +16,8 @@ const Homepage = () => {
       <SafetyPriority />
       <GasProductGrid />
       <ContactSection />
+      <EmergencyHelpSection />
+      <Footer />
     </div>
   );
 };
