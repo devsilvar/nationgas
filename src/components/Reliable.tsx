@@ -104,7 +104,7 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <div className='bg-white py-12 px-4  '>
+    <div className='bg-white py-16 px-4  '>
       <div className='flex flex-col gap-[16px] mb-[35px]'>
         <h2 className='font-[600] text-[40px] text-center'>
           Fast, Safe & Reliable Gas Services
@@ -114,7 +114,7 @@ const ServicesSection: React.FC = () => {
           installations, we've got all your needs covered
         </p>
       </div>
-      <div className='max-w-[80%] mx-auto'>
+      <div className='  max-w-[95%] lg:max-w-[85%] mx-auto'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
