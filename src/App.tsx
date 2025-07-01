@@ -8,13 +8,6 @@ export default function App() {
       <main>
         <Outlet />
       </main>
-      <footer>Footer here</footer>
-      <footer>Footer here</footer> <footer>Footer here</footer>{' '}
-      <footer>Footer here</footer> <footer>Footer here</footer>{' '}
-      <footer>Footer here</footer> <footer>Footer here</footer>{' '}
-      <footer>Footer here</footer> <footer>Footer here</footer>{' '}
-      <footer>Footer here</footer> <footer>Footer here</footer>{' '}
-      <footer>Footer here</footer>
     </div>
   );
 }
