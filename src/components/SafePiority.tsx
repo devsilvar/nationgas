@@ -3,15 +3,16 @@ import React from 'react';
 const badges = [
   {
     text: 'Insured Services',
-    position: 'md:bottom-40 bottom-36 md:left-[30%]',
+    position:
+      'md:bottom-40 bottom-44  right-[10%] lg:right-auto  md:left-[30%]',
   },
   {
     text: 'Quality Guaranteed',
-    position: 'md:bottom-52 bottom-36 right-[4%] md:right-[32%]',
+    position: 'md:bottom-52 bottom-60 right-[28%] md:right-[32%]',
   },
   {
     text: 'Gas Safety Certified',
-    position: 'md:bottom-8 bottom-10 left-[2%] md:left-1/4',
+    position: 'md:bottom-8 bottom-28 left-[24%] md:left-1/4',
   },
   {
     text: 'Emergency Support',
@@ -21,7 +22,7 @@ const badges = [
 
 const SafetyPriority: React.FC = () => {
   return (
-    <section className='h-[503px] relative bg-black text-white py-10 overflow-hidden text-center px-4'>
+    <section className='lg:h-[503px] h-[550px] relative bg-black text-white py-10 overflow-hidden text-center px-4'>
       <div className='max-w-3xl mx-auto z-10 relative'>
         <h2 className='text-2xl md:text-[32px] font-semibold mb-4'>
           Safety is Our Top Priority

@@ -34,7 +34,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
       {/* Content Container */}
       <div className='p-6 '>
-        <h3 className='text-[24px] font-[500] text-gray-900 mb-2'>{title}</h3>
+        <h3 className=' text-gray-900 mb-2'>{title}</h3>
         <p className='text-gray-700  font-normal text-[16px] mb-6 leading-relaxed'>
           {description}
         </p>
@@ -106,12 +106,12 @@ const ServicesSection: React.FC = () => {
   return (
     <div className='bg-white py-16 px-4  '>
       <div className='flex flex-col gap-[16px] mb-[35px]'>
-        <h2 className='font-[600] text-[40px] text-center'>
+        <h2 className='font-[600] lg:text-[40px] text-[20px] text-center w-[70%] mx-auto lg:w-full'>
           Fast, Safe & Reliable Gas Services
         </h2>
-        <p className='text-[16px] font-[400] text-center'>
-          From gas delivery to equipment sales and professional <br />{' '}
-          installations, we've got all your needs covered
+        <p className='text-[16px] font-[400] text-center px-5 lg:px-0'>
+          From gas delivery to equipment sales and professional installations,
+          we've got all your needs covered
         </p>
       </div>
       <div className='  max-w-[95%] lg:max-w-[85%] mx-auto'>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import NavigationMenu from './NavItems';
+import clsx from 'clsx';
 
 // Main Navbar Component
 const Navbar = () => {
@@ -17,13 +18,23 @@ const Navbar = () => {
 
   return (
     <nav className='relative z-10'>
+      {isMobileMenuOpen && (
+        <div
+          className='fixed inset-0 bg-black bg-opacity-40 z-40'
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
       <div className=' mx-auto '>
         <div className='flex items-center shadow-sm justify-between h-20 px-4 sm:px-6 md:px-12'>
-          <img src='/logo.png' alt='Logo' />
+          <img src='/logo.png' alt='Logo ' className='z-10 relative' />
           {/* Desktop Navigation */}
           <div className='hidden md:flex items-center space-x-8'>
             {/* Navigation Links */}
-            <NavigationMenu items={navigationItems} isMobile={false} />
+            <NavigationMenu
+              mobileState={false}
+              items={navigationItems}
+              isMobile={false}
+            />
           </div>
 
           {/* Mobile Menu Button */}
@@ -32,21 +43,25 @@ const Navbar = () => {
               onClick={toggleMobileMenu}
               className='text-gray-black hover:text-gray-600 p-2'
             >
-              {isMobileMenuOpen ? <X /> : <Menu />}
+              {isMobileMenuOpen ? <Menu /> : <Menu />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation Menu */}
-        {isMobileMenuOpen && (
-          <div className='md:hidden shadow-lg absolute z-100 top-20 left-0 w-full bg-white border-gray-100'>
-            <NavigationMenu
-              items={navigationItems}
-              isMobile={true}
-              onItemClick={() => setIsMobileMenuOpen(false)}
-            />
-          </div>
-        )}
+        <div
+          className={clsx(
+            'md:hidden shadow-2xl fixed z-50 h-screen top-0 left-0 w-[70%] bg-white border-r border-gray-100 transition-transform duration-500 ease-in-out',
+            isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          )}
+        >
+          <NavigationMenu
+            items={navigationItems}
+            isMobile={true}
+            mobileState={isMobileMenuOpen}
+            onItemClick={() => setIsMobileMenuOpen((prev) => !prev)}
+          />
+        </div>
       </div>
     </nav>
   );
