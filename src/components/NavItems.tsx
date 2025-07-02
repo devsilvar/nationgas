@@ -2,7 +2,6 @@ import { Link, NavLink } from 'react-router-dom';
 import Button from './Button';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import Logo from '../assets/logo.png';
 import { X } from 'lucide-react';
 type NavigationMenuItem = {
   label: string;

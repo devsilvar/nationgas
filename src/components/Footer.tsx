@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
   return (
     <section className='h-[310px] flex lg:flex-row flex-col items-center mx-auto  lg:w-[90%] justify-between'>

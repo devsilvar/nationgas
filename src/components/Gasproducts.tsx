@@ -1,9 +1,4 @@
-import {
-  ArrowRight,
-  ArrowRightCircleIcon,
-  ChevronLeft,
-  ChevronRight,
-} from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import React, { useState } from 'react';
 
 interface Product {
