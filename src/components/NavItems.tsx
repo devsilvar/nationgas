@@ -11,14 +11,13 @@ type NavigationMenuItem = {
 interface NavigationMenuProps {
   items?: NavigationMenuItem[];
   isMobile?: boolean;
-  mobileState: boolean;
+  mobileState?: boolean;
   onItemClick?: () => void;
 }
 
 export default function NavigationMenu({
   items = [],
   isMobile = false,
-  mobileState = true,
   onItemClick = () => {},
 }: NavigationMenuProps) {
   return isMobile ? (
