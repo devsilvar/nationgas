@@ -23,7 +23,10 @@ export default function NavigationMenu({
   return isMobile ? (
     <div className=' px-4 pt-2 z-50  pb-3 space-y-4  mt-20 '>
       <div className='absolute top-3  left-[5%]'>
-        <img src='/logo.png' />
+        <Link to='/'>
+          {' '}
+          <img src='/logo.png' />
+        </Link>
       </div>
 
       <div className='absolute top-5  right-4'>

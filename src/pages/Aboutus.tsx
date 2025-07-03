@@ -1,25 +1,24 @@
+import React from 'react';
 import Hero from '../components/Hero';
-import ServicesSection from '../components/Reliable';
-import WhyChooseUs from '../components/WhyChooseUs';
+import OurImpact from '../components/about/OurImpact';
+import ServicesSection from '../components/about/Services';
 import SafetyPriority from '../components/SafePiority';
 import GasProductGrid from '../components/Gasproducts';
 import ContactSection from '../components/Contactsection';
 import EmergencyHelpSection from '../components/EmergencyHelp';
-import Footer from '../components/Footer';
-import ProfileCompletionBar from '../components/Completion';
 
-const Homepage = () => {
+const Aboutus = () => {
   return (
-    <div className='relative z-0'>
-      <Hero pageText='Home' imagelink='/Hero.png' />
+    <>
+      <Hero imagelink='/AboutHero.png' pageText='About' />
+      <OurImpact />
       <ServicesSection />
-      <WhyChooseUs />
       <SafetyPriority />
       <GasProductGrid />
       <ContactSection />
       <EmergencyHelpSection />
-    </div>
+    </>
   );
 };
 
-export default Homepage;
+export default Aboutus;

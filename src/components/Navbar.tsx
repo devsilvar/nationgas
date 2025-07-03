@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import NavigationMenu from './NavItems';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 // Main Navbar Component
 const Navbar = () => {
@@ -26,7 +27,9 @@ const Navbar = () => {
       )}
       <div className=' mx-auto '>
         <div className='flex items-center shadow-sm justify-between h-20 px-4 sm:px-6 md:px-12'>
-          <img src='/logo.png' alt='Logo ' className='z-10 relative' />
+          <Link to='/'>
+            <img src='/logo.png' alt='Logo ' className='z-10 relative' />
+          </Link>
           {/* Desktop Navigation */}
           <div className='hidden md:flex items-center space-x-8'>
             {/* Navigation Links */}

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Homepage from './pages/Homepage.tsx';
+import Aboutus from './pages/Aboutus.tsx';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Homepage />,
+      },
+      {
+        path: '/about',
+        element: <Aboutus />,
       },
     ],
   },
