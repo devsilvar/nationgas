@@ -5,8 +5,6 @@ import SafetyPriority from '../components/SafePiority';
 import GasProductGrid from '../components/Gasproducts';
 import ContactSection from '../components/Contactsection';
 import EmergencyHelpSection from '../components/EmergencyHelp';
-import Footer from '../components/Footer';
-import ProfileCompletionBar from '../components/Completion';
 
 const Homepage = () => {
   return (

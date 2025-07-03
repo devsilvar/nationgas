@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Hero from '../components/Hero';
 import OurImpact from '../components/about/OurImpact';
 import ServicesSection from '../components/about/Services';
