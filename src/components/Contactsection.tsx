@@ -25,14 +25,7 @@ const itemVariants: Variants = {
   },
 };
 
-const hoverVariants: Variants = {
-  hover: {
-    y: -5,
-    boxShadow:
-      '0 10px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)',
-  },
-  tap: { scale: 0.98 },
-};
+
 
 const ContactSection: React.FC = () => {
   return (

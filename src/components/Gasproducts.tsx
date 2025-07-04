@@ -80,13 +80,6 @@ const itemVariants: Variants = {
   }),
 };
 
-const hoverVariants: Variants = {
-  hover: {
-    y: -5,
-    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
-  },
-};
-
 const GasProductGrid: React.FC = () => {
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState<'left' | 'right'>('right');
