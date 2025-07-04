@@ -47,6 +47,7 @@ export default function NavigationMenu({
       <div className='absolute bottom-16  right-1/4'>
         <Button
           variant='outline'
+          link='/contact'
           className='w-full bg-[#FDE056] font-[bold] border-transparent shadow-2xl'
         >
           Contact Us
@@ -73,7 +74,10 @@ export default function NavigationMenu({
           </NavLink>
         ))}
       </div>
-      <Button variant='outline'>Contact Us</Button>
+
+      <Button variant='outline' link='/contact'>
+        Contact Us
+      </Button>
     </div>
   );
 }

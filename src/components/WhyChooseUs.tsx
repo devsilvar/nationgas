@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useInView, type Variants } from 'framer-motion';
 import { ShieldCheck, Headphones, Users2 } from 'lucide-react';
 
-const features = [
+interface Feature {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+const features: Feature[] = [
   {
     icon: <ShieldCheck className='w-[40px] h-[40px] text-black' />,
     title: 'Safety First',
@@ -22,40 +29,209 @@ const features = [
   },
 ];
 
+// ========================
+// Animation Variants (Typed)
+// ========================
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const headerVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.42, 0, 0.58, 1],
+    },
+  },
+};
+
+const subHeaderVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: 0.2,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+const gridVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      staggerChildren: 0.3,
+      delayChildren: 0.6,
+    },
+  },
+};
+
+const featureVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+    scale: 0.9,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.7,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+const iconVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.5,
+    rotate: -45,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    rotate: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeInOut',
+      delay: 0.2,
+    },
+  },
+};
+
+const contentVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const textVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.42, 0, 0.58, 1],
+    },
+  },
+};
+
+// ========================
+// Component
+// ========================
 const WhyChooseUs: React.FC = () => {
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-80px' });
+
   return (
-    <section className='bg-white py-16 px-4 text-center my-10'>
+    <motion.section
+      ref={ref}
+      variants={containerVariants}
+      initial='hidden'
+      animate={isInView ? 'visible' : 'hidden'}
+      className='bg-white py-16 px-4 text-center my-10'
+    >
       <div className='max-w-5xl mx-auto'>
         <div className='flex flex-col gap-5'>
-          <h2 className='text-2xl md:text-[32px] font-semibold text-black mb-2'>
+          <motion.h2
+            variants={headerVariants}
+            className='text-2xl md:text-[32px] font-semibold text-black mb-2'
+          >
             Why Choose Nations Gas?
-          </h2>
-          <p className='text-gray-[40px]00 mb-12 text-[16px]'>
+          </motion.h2>
+          <motion.p
+            variants={subHeaderVariants}
+            className='text-gray-600 mb-12 text-[16px]'
+          >
             We're committed to providing safe, reliable, and <br /> professional
             gas services you can trust
-          </p>
+          </motion.p>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-20  '>
+        <motion.div
+          variants={gridVariants}
+          className='grid grid-cols-1 md:grid-cols-3 gap-20'
+        >
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
-              className='flex flex-col mx-auto w-[90%] items-center text-center'
+              variants={featureVariants}
+              whileHover={{
+                y: -12,
+                scale: 1.05,
+                transition: {
+                  duration: 0.3,
+                  ease: [0, 0, 0.58, 1],
+                },
+              }}
+              className='flex flex-col mx-auto w-[90%] items-center text-center cursor-pointer'
             >
-              <div className='bg-[#ffeaea] p-[16px] rounded-[23.5px] mb-4'>
+              <motion.div
+                variants={iconVariants}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  backgroundColor: '#ffd7d7',
+                  transition: { duration: 0.3 },
+                }}
+                className='bg-[#ffeaea] p-[16px] rounded-[23.5px] mb-4'
+              >
                 {feature.icon}
-              </div>
-              <h3 className='text-[24px] text-center font-semibold text-black mb-2'>
-                {feature.title}
-              </h3>
-              <p className='text-[16px] text-gray-[40px]00'>
-                {feature.description}
-              </p>
-            </div>
+              </motion.div>
+
+              <motion.div variants={contentVariants}>
+                <motion.h3
+                  variants={textVariants}
+                  className='text-[24px] text-center font-semibold text-black mb-2'
+                >
+                  {feature.title}
+                </motion.h3>
+                <motion.p
+                  variants={textVariants}
+                  className='text-[16px] text-gray-600'
+                >
+                  {feature.description}
+                </motion.p>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

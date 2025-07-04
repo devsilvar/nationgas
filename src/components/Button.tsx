@@ -1,16 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'outline' | 'nothing';
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   className?: string;
+  link?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'nothing',
   onClick,
+  link = '#',
   className = '',
 }) => {
   const baseClasses =
@@ -23,14 +26,16 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <button
-      onClick={onClick}
-      className={`${baseClasses} ${
-        variants[variant as keyof typeof variants]
-      } ${className}`}
-    >
-      {children}
-    </button>
+    <Link to={link}>
+      <button
+        onClick={onClick}
+        className={`${baseClasses} ${
+          variants[variant as keyof typeof variants]
+        } ${className}`}
+      >
+        {children}
+      </button>
+    </Link>
   );
 };
 
