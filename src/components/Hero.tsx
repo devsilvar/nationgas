@@ -159,7 +159,7 @@ const Hero = ({ imagelink, pageText }: HeroProps) => {
           variants={containerVariants}
           initial='hidden'
           animate='visible'
-          className='relative z-0 flex justify-between md:flex-row flex-col items-start w-[90%] mx-auto'
+          className='relative z-0 flex justify-between lg:flex-row flex-col items-start w-[90%] mx-auto'
         >
           <motion.div variants={textVariants} className='lg:mt-10 -mt-10'>
             <motion.p

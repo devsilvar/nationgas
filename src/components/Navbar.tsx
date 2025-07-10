@@ -26,12 +26,12 @@ const Navbar = () => {
         />
       )}
       <div className=' mx-auto '>
-        <div className='flex items-center shadow-sm justify-between h-20 px-4 sm:px-6 md:px-12'>
+        <div className='flex items-center shadow-sm justify-between h-20 px-4 sm:px-6 lg:px-12'>
           <Link to='/'>
             <img src='/logo.png' alt='Logo ' className='z-10 relative' />
           </Link>
           {/* Desktop Navigation */}
-          <div className='hidden md:flex items-center space-x-8'>
+          <div className='hidden lg:flex items-center space-x-8'>
             {/* Navigation Links */}
             <NavigationMenu
               mobileState={false}
@@ -41,7 +41,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className='md:hidden'>
+          <div className='lg:hidden'>
             <button
               onClick={toggleMobileMenu}
               className='text-gray-black hover:text-gray-600 p-2'
@@ -54,7 +54,7 @@ const Navbar = () => {
         {/* Mobile Navigation Menu */}
         <div
           className={clsx(
-            'md:hidden shadow-2xl fixed z-50 h-screen top-0 left-0 w-[70%] bg-white border-r border-gray-100 transition-transform duration-500 ease-in-out',
+            'lg:hidden shadow-2xl fixed z-50 h-screen top-0 left-0 w-[70%] bg-white border-r border-gray-100 transition-transform duration-500 ease-in-out',
             isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
           )}
         >

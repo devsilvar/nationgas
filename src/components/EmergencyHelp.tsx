@@ -47,9 +47,9 @@ const EmergencyHelpSection: React.FC = () => {
       whileInView='visible'
       viewport={{ once: true, margin: '-100px' }}
       variants={containerVariants}
-      className='bg-black text-white pt-10 px-4 md:px-16'
+      className='bg-black text-white pt-10 px-4 lg:px-16'
     >
-      <div className='max-w-[90%] lg:max-w-7xl mx-auto flex flex-col justify-center md:flex-row items-center lg:justify-between gap-10'>
+      <div className='max-w-[90%] lg:max-w-7xl mx-auto flex flex-col justify-center lg:flex-row items-center lg:justify-between gap-10'>
         {/* Text Section */}
         <motion.div variants={textVariants} className='lg:flex-1'>
           <h2 className='text-2xl text-white font-semibold mb-4 text-center lg:text-left'>
@@ -58,7 +58,7 @@ const EmergencyHelpSection: React.FC = () => {
 
           <motion.p
             variants={textVariants}
-            className='text-gray-300 mb-6 lg:text-start text-center px-4 lg:px-0 text-sm md:text-base max-w-md'
+            className='text-gray-300 mb-6 lg:text-start text-center px-4 lg:px-0 text-sm lg:text-base max-w-lg'
           >
             For urgent gas deliveries or emergency services, contact us
             immediately.
@@ -74,7 +74,7 @@ const EmergencyHelpSection: React.FC = () => {
             href='https://wa.me/234236913404'
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-yellow-400 block text-center lg:w-[50%] lg:mx-0 w-[60%] mx-auto text-black font-medium px-3 py-3 rounded-md hover:bg-yellow-500 transition'
+            className='bg-yellow-400 block text-center lg:w-[50%] lg:mx-0 w-[60%] mx-auto text-black font-medium px-3 py-3 rounded-lg hover:bg-yellow-500 transition'
           >
             Chat on WhatsApp
           </motion.a>
@@ -85,7 +85,7 @@ const EmergencyHelpSection: React.FC = () => {
           <motion.img
             src='/gasimage.png'
             alt='Gas Cylinders'
-            className='w-full max-w-md md:max-w-full object-contain'
+            className='w-full max-w-lg lg:max-w-full object-contain'
             whileHover={{ scale: 1.02 }}
             transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           />

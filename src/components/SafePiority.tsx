@@ -15,19 +15,19 @@ interface Badge {
 const badges: Badge[] = [
   {
     text: 'Insured Services',
-    position: 'md:bottom-40 bottom-44 right-[10%] lg:right-auto md:left-[30%]',
+    position: 'lg:bottom-40 bottom-44 right-[10%] lg:right-auto lg:left-[30%]',
   },
   {
     text: 'Quality Guaranteed',
-    position: 'md:bottom-52 bottom-60 right-[28%] md:right-[32%]',
+    position: 'lg:bottom-52 bottom-60 right-[28%] lg:right-[32%]',
   },
   {
     text: 'Gas Safety Certified',
-    position: 'md:bottom-8 bottom-28 left-[24%] md:left-1/4',
+    position: 'lg:bottom-8 bottom-28 left-[24%] lg:left-1/4',
   },
   {
     text: 'Emergency Support',
-    position: 'md:bottom-8 bottom-10 right-[2%] md:right-1/4',
+    position: 'lg:bottom-8 bottom-10 right-[2%] lg:right-1/4',
   },
 ];
 
@@ -97,13 +97,13 @@ const SafetyPriority: React.FC = () => {
       <div className='max-w-3xl mx-auto z-10 relative'>
         <motion.h2
           variants={textVariants}
-          className='text-2xl md:text-[32px] font-semibold mb-4'
+          className='text-2xl lg:text-[32px] font-semibold mb-4'
         >
           Safety is Our Top Priority
         </motion.h2>
         <motion.h4
           variants={textVariants}
-          className='text-gray-300 text-[16px] lg:text-[17px] font-[400] tracking-wide lg:w-[80%] mx-auto md:text-base'
+          className='text-gray-300 text-[16px] lg:text-[17px] font-[400] tracking-wide lg:w-[80%] mx-auto lg:text-base'
         >
           We follow strict safety protocols in gas handling, delivery, and
           installation. All our equipment is regularly inspected, and our
@@ -115,7 +115,7 @@ const SafetyPriority: React.FC = () => {
       {/* Yellow Circle */}
       <motion.div
         variants={circleVariants}
-        className='relative lg:left-1/3 transform -translate-x-1/2 -bottom-[13%] w-[528px] h-[528px] bg-yellow-400 rounded-full -z-0'
+        className='relative lg:left-1/3 md:left-[17%] -left-1/3 transform -translate-x-1/2 -bottom-[13%] w-[528px] h-[528px] bg-yellow-400 rounded-full -z-0'
       />
 
       {/* Floating Badges */}
@@ -123,7 +123,7 @@ const SafetyPriority: React.FC = () => {
         <motion.div
           key={idx}
           variants={badgeVariants}
-          className={`absolute ${badge.position} bg-white text-black text-xs md:text-sm font-medium flex items-center gap-2 md:px-4 md:py-[10px] py-1 px-2 rounded shadow z-10`}
+          className={`absolute ${badge.position} bg-white text-black text-xs lg:text-sm font-medium flex items-center gap-2 lg:px-4 lg:py-[10px] py-1 px-2 rounded shadow z-10`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

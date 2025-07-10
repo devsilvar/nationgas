@@ -32,7 +32,7 @@ const ContactSection: React.FC = () => {
       whileInView='visible'
       viewport={{ once: true, margin: '-50px' }}
       variants={containerVariants}
-      className='bg-white py-16 relative   -z-10 px-4 md:px-10 mx-auto lg:max-w-[80%] text-center'
+      className='bg-white py-16 relative   -z-10 px-4 lg:px-10 mx-auto lg:max-w-[80%] text-center'
     >
       <motion.h2
         variants={itemVariants}
@@ -47,7 +47,7 @@ const ContactSection: React.FC = () => {
         Ready to place an order or have questions? We're here to help!
       </motion.p>
 
-      <div className='grid gap-8 md:grid-cols-3 max-w-6xl mx-auto'>
+      <div className='grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto'>
         {/* Call Us */}
         <motion.div
           variants={itemVariants}
@@ -76,7 +76,7 @@ const ContactSection: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href='tel:+234236913404'
-              className='inline-block px-4 py-2 shadow-2xl border border-gray-500 text-sm rounded-md hover:bg-gray-100 transition'
+              className='inline-block px-4 py-2 shadow-2xl border border-gray-500 text-sm rounded-lg hover:bg-gray-100 transition'
             >
               Call +234 (2369) 3404
             </motion.a>
@@ -113,7 +113,7 @@ const ContactSection: React.FC = () => {
               href='https://wa.me/234236913404'
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-block px-4 py-2 shadow-2xl bg-black text-white text-sm rounded-md hover:bg-gray-800 transition'
+              className='inline-block px-4 py-2 shadow-2xl bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition'
             >
               Chat on WhatsApp
             </motion.a>
@@ -151,7 +151,7 @@ const ContactSection: React.FC = () => {
               href='https://maps.google.com'
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-block px-4 py-2 border shadow-2xl border-gray-500 text-sm rounded-md hover:bg-gray-100 transition'
+              className='inline-block px-4 py-2 border shadow-2xl border-gray-500 text-sm rounded-lg hover:bg-gray-100 transition'
             >
               Get Direction
             </motion.a>

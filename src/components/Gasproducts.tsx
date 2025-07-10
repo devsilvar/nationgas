@@ -115,14 +115,14 @@ const GasProductGrid: React.FC = () => {
       <motion.h2
         variants={itemVariants}
         custom={direction}
-        className='text-2xl md:text-3xl font-semibold text-black mb-2'
+        className='text-2xl lg:text-3xl font-semibold text-black mb-2'
       >
         Shop Gas Appliances and Accessories
       </motion.h2>
       <motion.p
         variants={itemVariants}
         custom={direction}
-        className='text-gray-600 mb-12 max-w-xl mx-auto text-sm md:text-base'
+        className='text-gray-600 mb-12 max-w-xl mx-auto text-sm lg:text-base'
       >
         We're committed to providing safe, reliable, and professional gas
         services you can trust

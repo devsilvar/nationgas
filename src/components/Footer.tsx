@@ -11,7 +11,7 @@ const Footer = () => {
         <a href='/'>Services</a>
         <a href='/'>About Us</a>
 
-        <button className='flex w-auto  items-center px-3 py-2 rounded-md gap-2 border border-gray-600'>
+        <button className='flex w-auto  items-center px-3 py-2 rounded-lg gap-2 border border-gray-600'>
           {' '}
           <img src='/whatsapp.svg' className='w-6 h-6' /> Chat on Whatsapp
         </button>

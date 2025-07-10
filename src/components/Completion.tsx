@@ -18,7 +18,7 @@ const ProfileCompletionBar: React.FC<ProfileCompletionBarProps> = ({
   const navigate = useNavigate();
 
   return (
-    <div className='flex items-center gap-4 bg-white shadow-md px-4 py-3 rounded-lg w-fit border border-gray-200'>
+    <div className='flex items-center gap-4 bg-white shadow-lg px-4 py-3 rounded-lg w-fit border border-gray-200'>
       <svg height={radius * 2} width={radius * 2}>
         <circle
           stroke='#e5e7eb'

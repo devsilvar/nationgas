@@ -169,7 +169,7 @@ const WhyChooseUs: React.FC = () => {
         <div className='flex flex-col gap-5'>
           <motion.h2
             variants={headerVariants}
-            className='text-2xl md:text-[32px] font-semibold text-black mb-2'
+            className='text-2xl lg:text-[32px] font-semibold text-black mb-2'
           >
             Why Choose Nations Gas?
           </motion.h2>
@@ -184,7 +184,7 @@ const WhyChooseUs: React.FC = () => {
 
         <motion.div
           variants={gridVariants}
-          className='grid grid-cols-1 md:grid-cols-3 gap-20'
+          className='grid grid-cols-1 lg:grid-cols-3 gap-20'
         >
           {features.map((feature, index) => (
             <motion.div

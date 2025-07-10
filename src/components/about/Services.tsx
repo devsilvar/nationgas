@@ -23,7 +23,7 @@ const services = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className='bg-white py-16 px-4 md:px-20'>
+    <section className='bg-white py-16 px-4 lg:px-20'>
       <h2 className=' my-10 text-[32px] font-[600] text-center'>
         What we Offer{' '}
       </h2>
@@ -31,14 +31,14 @@ const ServicesSection: React.FC = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className='flex flex-col md:flex-row items-center gap-8 md:gap-12'
+            className='flex flex-col lg:flex-row items-center gap-8 lg:gap-12'
           >
             <img
               src={service.image}
               alt={service.title}
-              className='w-full md:w-1/3 rounded shadow-md'
+              className='w-full lg:w-1/3 rounded shadow-lg'
             />
-            <div className='text-center md:text-left md:w-1/3'>
+            <div className='text-center lg:text-left lg:w-1/3'>
               <h3 className='text-[24px] mb-5 font-semibold  text-black'>
                 {service.title}
               </h3>

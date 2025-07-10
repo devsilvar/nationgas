@@ -40,10 +40,10 @@ const impactData = [
 
 const OurImpact: React.FC = () => {
   return (
-    <section className='bg-[#FFF8E6] text-black py-16 px-4 md:px-20'>
+    <section className='bg-[#FFF8E6] text-black py-16 px-4 lg:px-20'>
       <div className='text-center max-w-3xl mx-auto mb-16'>
         <h2 className='text-3xl font-semibold mb-4'>Our Impact So Far</h2>
-        <p className='text-md text-gray-700'>
+        <p className='text-lg text-gray-700'>
           At Nations Gas, we’re more than just a gas plant — we’re your trusted
           partner for safe, reliable, and convenient cooking gas solutions.
           Whether you’re a busy parent, a food vendor, or setting up your first
