@@ -9,7 +9,9 @@ import EmergencyHelpSection from '../components/EmergencyHelp';
 const Homepage = () => {
   return (
     <div className='relative z-0'>
-      <Hero pageText='Home' imagelink='/Hero.png' />
+      <div className='lg:mb-auto mb-[14%] relative -z-10'>
+        <Hero pageText='Home' imagelink='/Hero.png' />
+      </div>
       <ServicesSection />
       <WhyChooseUs />
       <SafetyPriority />

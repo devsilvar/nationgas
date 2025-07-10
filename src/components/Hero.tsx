@@ -1,7 +1,8 @@
 import { motion, type Variants } from 'framer-motion';
 import { lazy, Suspense } from 'react';
 import Button from './Button';
-
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import { MyImage } from './Lazyimage';
 const FeedbackForm = lazy(() => import('./contact/Form'));
 
 interface HeroProps {
@@ -90,18 +91,21 @@ const starsVariants: Variants = {
 const Hero = ({ imagelink, pageText }: HeroProps) => {
   return (
     <section
-      className='relative inset-0 lg:h-[500px] h-[400px]'
-      style={{
-        backgroundImage: `url(${imagelink})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      className='relative inset-0 z-0 lg:h-[500px] h-fit '
+      // style={{
+      //   backgroundImage: `url(${imagelink})`,
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      // }}
     >
+      <div className='absolute -z-0 inset-0 '>
+        <MyImage image={imagelink} alt='Hero Background' />
+      </div>
       <motion.div
         variants={containerVariants}
         initial='hidden'
         animate='visible'
-        className='lg:absolute lg:left-16 lg:top-1/2 lg:-translate-y-1/2 lg:mx-0 max-w-[90%] mx-auto lg:pt-0 pt-[20%] lg:max-w-[58%]'
+        className='relative lg:absolute z-10 lg:left-16 lg:top-1/2 lg:-translate-y-1/2 lg:mx-0 max-w-[90%] mx-auto lg:pt-0 pt-[20%] lg:max-w-[58%]'
       >
         {pageText === 'Home' && (
           <>
@@ -155,7 +159,7 @@ const Hero = ({ imagelink, pageText }: HeroProps) => {
           variants={containerVariants}
           initial='hidden'
           animate='visible'
-          className='flex justify-between md:flex-row flex-col items-start w-[90%] mx-auto'
+          className='relative z-0 flex justify-between md:flex-row flex-col items-start w-[90%] mx-auto'
         >
           <motion.div variants={textVariants} className='lg:mt-10 -mt-10'>
             <motion.p
@@ -203,7 +207,7 @@ const Hero = ({ imagelink, pageText }: HeroProps) => {
           <motion.div variants={formVariants}>
             <Suspense
               fallback={
-                <div className='w-full h-64 bg-white/10 backdrop-blur-sm rounded-lg animate-pulse flex items-center justify-center'>
+                <div className='w-full absolute z-20 h-64 bg-white/10 backdrop-blur-sm rounded-lg animate-pulse flex items-center justify-center'>
                   <div className='text-white'>Loading...</div>
                 </div>
               }

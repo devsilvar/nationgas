@@ -2,7 +2,7 @@ import React from 'react';
 
 const FeedbackForm: React.FC = () => {
   return (
-    <div className='max-w-md mx-auto relative bg-white p-6 border mt-10 border-gray-200 rounded-md shadow-sm'>
+    <div className='max-w-md mx-auto relative z-10 bg-white shadow-2xl p-6 border mt-10 border-gray-200 rounded-md '>
       <h2 className='text-lg font-semibold text-gray-800 mb-6'>
         Please fill out the form below to share your feedback or complaints.
       </h2>
@@ -55,6 +55,12 @@ const FeedbackForm: React.FC = () => {
             placeholder='Your message'
           />
         </div>
+        <button
+          type='submit'
+          className='w-full bg-[#FDE056] text-black font-semibold py-2 rounded-md hover:bg-[#f7d012] transition-colors duration-300'
+        >
+          Submit Feedback
+        </button>
       </form>
     </div>
   );

@@ -1,4 +1,3 @@
-
 import Hero from '../components/Hero';
 import OurImpact from '../components/about/OurImpact';
 import ServicesSection from '../components/about/Services';
@@ -10,7 +9,9 @@ import EmergencyHelpSection from '../components/EmergencyHelp';
 const Aboutus = () => {
   return (
     <>
-      <Hero imagelink='/AboutHero.png' pageText='About' />
+      <div className='lg:mb-auto mb-[34%] relative -z-10'>
+        <Hero imagelink='/AboutHero.png' pageText='About' />
+      </div>
       <OurImpact />
       <ServicesSection />
       <SafetyPriority />

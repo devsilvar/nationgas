@@ -25,8 +25,6 @@ const itemVariants: Variants = {
   },
 };
 
-
-
 const ContactSection: React.FC = () => {
   return (
     <motion.section
@@ -34,7 +32,7 @@ const ContactSection: React.FC = () => {
       whileInView='visible'
       viewport={{ once: true, margin: '-50px' }}
       variants={containerVariants}
-      className='bg-white py-16 px-4 md:px-10 mx-auto lg:max-w-[80%] text-center'
+      className='bg-white py-16 relative   -z-10 px-4 md:px-10 mx-auto lg:max-w-[80%] text-center'
     >
       <motion.h2
         variants={itemVariants}

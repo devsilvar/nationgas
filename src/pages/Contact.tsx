@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       <Hero pageText='Contact' imagelink='/contactHero.png' />
-      <div className='lg:mt-auto mt-[70%] '>
+      <div className='lg:mt-[5%] mt-[4%]  relative -z-10 '>
         <ContactSection />
       </div>
       <BusinessInfoCards />

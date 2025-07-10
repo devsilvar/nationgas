@@ -44,11 +44,11 @@ export default function NavigationMenu({
           {item.label}
         </Link>
       ))}
-      <div className='absolute bottom-16  right-1/4'>
+      <div className='absolute w-full top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"'>
         <Button
           variant='outline'
           link='/contact'
-          className='w-full bg-[#FDE056] font-[bold] border-transparent shadow-2xl'
+          className=' bg-[#FDE056] font-montserrat w-[70%] px-2 lg:px-8 py-2 mx-auto block  border-transparent shadow-deep hover:scale-110 hover:bg-[#FDE056] hover:text-black transition-all duration-300 text-black text-md font-semibold'
         >
           Contact Us
         </Button>
@@ -56,14 +56,14 @@ export default function NavigationMenu({
     </div>
   ) : (
     <div className='hidden md:flex items-center space-x-8'>
-      <div className='flex items-center space-x-1 '>
+      <div className='flex items-center space-x-9 '>
         {items.map((item, index) => (
           <NavLink
             key={index}
             to={item.href}
             className={({ isActive }) =>
               clsx(
-                'text-sm font-medium px-3 py-2',
+                'text-md font-medium px-3 py-2',
                 isActive
                   ? 'text-black'
                   : 'text-gray-500 text-[16px] hover:text-gray-700'
