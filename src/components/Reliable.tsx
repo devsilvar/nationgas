@@ -302,7 +302,7 @@ const ServicesSection: React.FC = () => {
       </motion.div>
 
       <div className='max-w-[95%] lg:max-w-[85%] mx-auto'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
           {services.map((service) => (
             <ServiceCard key={service.index} {...service} />
           ))}

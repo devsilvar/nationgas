@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import Button from './Button';
+import Button from '../components/Button';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { X } from 'lucide-react';
@@ -25,7 +25,7 @@ export default function NavigationMenu({
       <div className='absolute top-3  left-[5%]'>
         <Link to='/'>
           {' '}
-          <img src='/logo.svg' className='w-16 h-16'/>
+          <img src='/logo.svg' className='w-16 h-16' />
         </Link>
       </div>
 

@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { motion, useInView, type Variants } from 'framer-motion';
-import { ShieldCheck, Headphones, Users2 } from 'lucide-react';
 
 interface Feature {
   icon: React.ReactNode;
@@ -10,19 +9,19 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: <ShieldCheck className='w-[40px] h-[40px] text-black' />,
+    icon: <img src='/safety.svg' className='w-[40px] h-[40px] text-black' />,
     title: 'Safety First',
     description:
       'All our gas cylinders are tested and certified. Our technicians are trained in safety protocols.',
   },
   {
-    icon: <Headphones className='w-[40px] h-[40px] text-black' />,
+    icon: <img src='/support.svg' className='w-[40px] h-[40px] text-black' />,
     title: '24/7 Support',
     description:
       'Round-the-clock customer support for emergencies and urgent deliveries.',
   },
   {
-    icon: <Users2 className='w-[40px] h-[40px] text-black' />,
+    icon: <img src='/people.svg' className='w-[40px] h-[40px] text-black' />,
     title: 'Trusted by 1000+',
     description:
       'Round-the-clock customer support for emergencies and urgent deliveries.',

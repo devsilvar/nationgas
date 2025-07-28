@@ -28,7 +28,11 @@ const Navbar = () => {
       <div className=' mx-auto '>
         <div className='flex items-center shadow-sm justify-between h-20 px-4 sm:px-6 lg:px-12'>
           <Link to='/'>
-            <img src='/logo.svg' alt='Logo ' className='z-10 w-16 h-16 relative' />
+            <img
+              src='/logo.svg'
+              alt='Logo '
+              className='z-10 w-16 h-16 relative'
+            />
           </Link>
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
