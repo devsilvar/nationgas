@@ -69,7 +69,9 @@ const ContactSection: React.FC = () => {
             <div className='mb-9 text-center'>
               <h3 className='text-lg font-semibold mb-2'>Call Us</h3>
               <p className='text-sm text-gray-600 mb-4'>
-                Speak directly with our team
+                Speak directly with our team or reach out to our support at
+                <br />
+                <b>order@nationgas.org</b>
               </p>
             </div>
             <motion.a
